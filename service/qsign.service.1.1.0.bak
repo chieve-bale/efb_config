@@ -1,0 +1,9 @@
+[Unit]
+Description=unidbg-fetch-qsign
+After=network.target
+
+[Service]
+ExecStart=/root/unidbg-fetch-qsign-1.1.0/bin/unidbg-fetch-qsign --host=127.0.0.1 --port=18080  --count=2 --library=/root/unidbg-fetch-qsign-1.1.0/txlib/8.9.63  --android_id=52caf7e29f9d5d14
+
+[Install]
+WantedBy=multi-user.target

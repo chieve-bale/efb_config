@@ -1,0 +1,12 @@
+[Unit]
+Description=ehforwarderbotwx
+After=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root
+ExecStart=/usr/local/bin/ehforwarderbot -p wechat
+Restart=always

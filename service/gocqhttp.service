@@ -1,0 +1,12 @@
+[Unit]
+Descriptiont=gocqhttp
+After=qsign.service
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root/go-cqhttp/
+ExecStartPre=/usr/bin/sleep 5s
+ExecStart=/root/go-cqhttp/go-cqhttp -faststart

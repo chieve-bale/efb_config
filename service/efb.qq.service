@@ -1,0 +1,13 @@
+[Unit]
+Description=ehforwarderbotqq
+After=gocqhttp.service
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/root
+ExecStart=/usr/local/bin/ehforwarderbot -p qq
+Restart=always
+RestartSec=5

@@ -1,0 +1,4 @@
+echo_mp: 'XXXXXX'       # mp name
+ping: 'PING'            # keyword
+pong: 'PONG'            # response with keyword
+interval: 1800          # interval(s)

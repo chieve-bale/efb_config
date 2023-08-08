@@ -1,0 +1,9 @@
+[Unit]
+Description=qsign
+After=network.target
+
+[Service]
+ExecStart=/root/unidbg-fetch-qsign-1.1.6/bin/unidbg-fetch-qsign --basePath=/root/unidbg-fetch-qsign-1.1.6/txlib/8.9.63
+
+[Install]
+WantedBy=multi-user.target
