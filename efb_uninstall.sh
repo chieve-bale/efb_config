@@ -4,10 +4,19 @@ if [[ $aa == 'yes' ]]
 then
   rm -rf /root/.ehforwarderbot
   rm -rf /root/go-cqhttp
+  systemctl stop efb.qq.service
+  systemctl stop efb.wx.service
+  systemctl stop qsign.service
+  systemctl stop gocqhttp.service
+  systemctl disable efb.qq.service
+  systemctl disable efb.wx.service
+  systemctl disable qsign.service
+  systemctl disable gocqhttp.service
   rm -rf /etc/systemd/system/efb.qq.service
   rm -rf /etc/systemd/system/efb.wx.service
   rm -rf /etc/systemd/system/qsign.service
   rm -rf /etc/systemd/system/gocqhttp.service
+  systemctl daemon-reload
   rm -rf /bin/qq.sh
   rm -rf /bin/wx.sh
 #apt autoremove python3 libopus0 ffmpeg libmagic1 python3-pip libssl-dev
