@@ -129,7 +129,9 @@ cp -a $CURRENT_DIR/middle/catbaron.search_msg /root/.ehforwarderbot/profiles/wec
 cp $CURRENT_DIR/efb_uninstall.sh /root/
 rm -rf $CURRENT_DIR
 
-bash /root/go.sh
+systemctl start qsign.service
+sleep 20s
+systemctl start gocqhttp.service
 sleep 20s
 pid=$(ps -ef | grep go-cqhttp | grep -v 'grep' | awk '{print $2}')
 kill $pid
